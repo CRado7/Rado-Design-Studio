@@ -1,0 +1,207 @@
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-color: #333;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  /* animation: slide-out .75s ease-in-out forwards; */
+  /* animation-delay: 8s; */
+  pointer-events: none;
+  background-image: url('/Logo-Repeat.svg');
+  background-size: 100px 100px;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.intro-container::before, .intro-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  height: 300px;
+  z-index: 2; 
+  pointer-events: none;
+}
+
+.intro-container::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 1) 25%, rgba(51, 51, 51, 0) 100%);
+}
+
+.intro-container::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(51, 51, 51, 1) 25%, rgba(51, 51, 51, 0) 100%);
+}
+
+/* @keyframes slide-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+.sub-container {
+  width: 100%;
+}
+
+.intro {
+  color: var(--background-color);
+}
+
+.intro h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.slide-left {
+  animation: slide-left 2s ease-in-out forwards;
+}
+
+@keyframes slide-left {
+  0%, 25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  /* font-style: oblique; */
+  animation: slide-right 5s ease-in-out forwards;
+}
+
+@keyframes slide-right {
+  0%, 75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100dvh; 
+}
+
+/* .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1600px;
+} */
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.team-member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 400px;
+}
+
+.team-member:hover {
+    cursor: pointer;
+}
+
+.member-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.member-image .static-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-image .static-image {
+    filter: grayscale(100%) brightness(0.5);
+    transition: .3s ease;
+}
+
+.team-member:hover .hover-image {
+    opacity: 1;
+    display: block;
+    z-index: 2;
+    animation: flicker 1s linear forwards;
+}
+
+@keyframes flicker {
+    0% { opacity: 0; }
+    8% { opacity: 0.9; }
+    12% { opacity: 0.2; }
+    18% { opacity: 1; }
+    22% { opacity: 0.3; }
+    28% { opacity: 1; }
+    34% { opacity: 0.1; }
+    40% { opacity: 1; }
+    50% { opacity: 0.4; }
+    60% { opacity: 1; }
+    68% { opacity: 0.7; }
+    75% { opacity: 1; }
+    82% { opacity: 0.9; }
+    90% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.member-image h3 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: yellow;
+    text-align: right;
+    font-size: 1rem;
+    z-index: 3;
+}
+
+.team-member:hover h3 {
+    display: block;
+}
+
+.member-info {
+    text-align: left;
+}
