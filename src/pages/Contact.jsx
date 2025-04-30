@@ -123,18 +123,7 @@ const Contact = () => {
                     required
                     className="input-field"
                 />
-                <div className="file-upload">
-                    <label htmlFor="image">Upload any relevant images or PDFs:</label>
-                    <input
-                        type="file"
-                        name="image"
-                        accept="image/*, .pdf"
-                        onChange={handleChange}
-                        multiple
-                        className="input-field"
-                        />
-                </div>
-                <button type="submit" className="input-field">Send</button>
+                <button type="submit" className="button">Send</button>
             </form>
         </div>
     );

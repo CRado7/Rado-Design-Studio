@@ -1,0 +1,15 @@
+.breadcrumbs {
+  position: absolute;
+  top: 5%;
+  left: 75px;
+  color: var(--main-text);
+}
+
+.breadcrumbs a {
+  color: var(--main-text);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}

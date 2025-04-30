@@ -32,15 +32,15 @@ const HomePage = () => {
                 <img src={Wordmark} alt="Rado Design Studio" className="fade-in-down"/>
                 <h1 className="fade-in-left">Crafting brands and digital experiences that{' '}<span className="blue">empower</span>{' '}your company</h1>
                 <div className="down-arrow">
-                    <a href="#motto-container" className="fade-in-up">
+                    <a href="#intro" className="fade-in-up">
                         <img src={downArrow} alt="To Next Section" />
                     </a>
                 </div>
             </div>
             <div className="index1">
-                <div className="intro opacity-up">
+                <div id="intro" className="intro opacity-up">
                     <h2><span className="blue">Unique</span>{' '}and{' '}<span className="blue">creative</span>{' '}solutions for businesses of all shapes and sizes</h2>
-                    <p><span className="yellow">Rado Design Studio</span>{' '}curates custom websites and brand designs specific to your business needs</p>
+                    <p><span className="yellow">Rado Design Studio</span>{' '}curates custom websites and brand designs specific to your business needs.</p>
                     <br />
                     <p>We work with emerging businesses who want to make a powerful statement right out of the gate and alsp existing brands who want ti revamp their current look.</p>
                     <br />
@@ -51,11 +51,11 @@ const HomePage = () => {
                     <div className="our-services-links">
                         {ourServicesData.map((service) => (
                             <div key={service.id} className="our-services-info" style={{ backgroundImage: `url(${service.image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-                                <h4>{service.title}</h4>
+                                <h2>{service.title}</h2>
                                 <div className="hover-statement">
                                     <h4>{service.title}</h4>
                                     <p>{service.hoverStatement}</p>
-                                    <Link to={`/services/${service.name}`} className="button">Learn More</Link>
+                                    <Link to={`/services/${service.url}`} className="button">Learn More</Link>
                                 </div>
                             </div>
                         ))}
@@ -79,11 +79,12 @@ const HomePage = () => {
                             <div className="featured-work-content">
                                 <div className="featured-work-image">
                                     <Link to={`/our-work/${job.company}`} style={{ backgroundImage: `url(${job.thumbnail})` }}></Link>
-                                    <h4>{job.company}</h4>
+                                    <h2>{job.company}</h2>
                                 </div>
                             </div>
                         </div>
                         ))}
+                        <Link to="/our-work">View more of our work</Link>
                     </div>
                 </div>
             </div>

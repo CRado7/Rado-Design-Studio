@@ -48,55 +48,43 @@ input, select, textarea {
     flex: 1;
     min-width: 400px;
     padding: 0.5rem;
-    border: 2px solid var(--background-color-dark);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--main-text);
     font-size: 1rem;
     font-family: inherit;
     background-color: transparent;
     transition: border-color 0.3s ease;
-    color: #213547;;
+    color: var(--accent-color);
+    cursor: none;
+}
+
+input {
+    background: transparent;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: black;
+    border-color: var(--accent-color);
 }
 
 select {
-    cursor: pointer;
+    cursor: none;
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* Non-WebKit browsers */
+    border-radius: 0;
 }
 
 select:has(option:disabled:checked) {
     color: grey;
   }
 
-textarea, .file-upload {
+textarea {
     height: 120px;
     resize: none;
 }
-
-.file-upload {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    flex: 1 1 100%;
-    text-align: left;
-}
-
-/* button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 0.8rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-} */
-
-/* button:hover {
-    background-color: cyan;
-} */
 
 select:hover {
     border-color: rgb(160, 160, 160);

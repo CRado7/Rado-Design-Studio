@@ -14,63 +14,100 @@
     transition: left 1s ease; /* Smooth transition */
   }
   
-  /* Sidebar Open State */
-  .sidebar.open {
-    left: 0;
-  }
+/* Sidebar Open State */
+.sidebar.open {
+  left: 0;
+}
 
-  .sidebar > img {
-    position: absolute;
-    top: 75px;
-    right: 7px;
-    width: 35px;
-    height: 35px;
-    transform: rotate(360deg);
-    transition: transform 0.3s ease;
-  }
+.sidebar > img {
+  position: absolute;
+  top: 75px;
+  right: 7px;
+  width: 35px;
+  height: 35px;
+  transform: rotate(360deg);
+  transition: transform 0.3s ease;
+}
 
-  .sidebar > img:hover {
-    transform: translate(5px, 0);
-  }
+.sidebar > img:hover {
+  transform: translate(5px, 0);
+}
 
-  .sidebar.open > img {
-    transform: rotate(-180deg);
-  }
+.sidebar.open > img {
+  transform: rotate(-180deg);
+}
 
-  .sidebar.open > img:hover {
-    transform: translate(5px, 0) rotate(-180deg);
+.sidebar.open > img:hover {
+  transform: translate(5px, 0) rotate(-180deg);
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex; 
+  margin: 50% 0 10% 0;
+  width: 100%;
+}
+
+.sidebar-logo {
+  max-width: 150px;
+  margin: auto;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  width: 150px;
+  background-color: transparent;
+  color: rgb(255, 250, 227);
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.submenu-item {
+  font-size: 14px;
+}
+
+.submenu {
+  text-align: left;
+}
+
+ul.submenu > label {
+  font-weight: 400;
+  text-align: left;
+  cursor: none;
+  /* background-color: tomato; */
+}
+
+.nav-services:hover {
+  color: var(--accent-color);
+  translate: 5px 0;
+}
+
+ul.submenu > a {
+  display: block;
+  flex-direction: column;
+  color: var(--main-text);
+  transition: .3s ease;
+  padding: 0 0 10px 10px;
+
+  &:hover {
+    color: var(--accent-color);
+    translate: 5px 0;
   }
-  
-  /* Sidebar Header */
-  .sidebar-header {
-    display: flex; 
-    margin: auto;
-    width: 100%;
-  }
-  
-  .sidebar-logo {
-    max-width: 150px;
-    margin: auto;
-  }
-  
-  /* Sidebar Menu */
-  .sidebar-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: auto;
-  }
-  
-  .menu-item {
-    /* width: 250px; */
-    background-color: transparent;
-    color: rgb(255, 250, 227);
-    border: none;
-    font-size: 16px;
-    text-align: left;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
+}
+ .menu-item.open {
+  color: var(--accent-color);
+  padding: 10px 0;
+ }
   
   

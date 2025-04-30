@@ -6,22 +6,26 @@ import '../styles/OurWork.css';
 const OurWork = () => {
     return (
         <div className="container fade">
+            <div className="intro no-before">
+                <h2>Creating Beyond Aesthetics.</h2>
+                <p>
+                    We listen first — to your goals, your story, and the vision you’re chasing. Then we bring it to life with bold branding, thoughtful websites, and visuals that feel as good as they look.
+                    <br /> <br />
+                    Every project is a collaboration, and every detail is shaped with care. Here’s a look at some of the ideas we’ve had the privilege to help bring into the world.
+                </p>
+            </div>
             <div className="our-work">
-                <p className="page-title">Some of the companies that we have brought our magic to</p>
+                <h3>Our Work</h3>
                 <div className="work-grid">
                     {jobData.map((job) => (
-                        <div 
-                            key={job.id} 
-                            className="work-item"  
-                        >
-                            <div className="work-image">
-                                <Link to={`/our-work/${job.company}`} style={{ backgroundImage: `url(${job.thumbnail})` }}>
-                                </Link>
-                            </div>
-                            <div className="work-content">
-                                <ul>
-                                    <li><h2>{job.company}</h2></li>
-                                    <li><p>{job.tag}</p></li>
+                        <div key={job.id} className="work-item">
+                            <div 
+                                className="work-image" 
+                                style={{ backgroundImage: `url(${job.thumbnail})` }}
+                            >
+                                <Link to={`/our-work/${job.company}`} className="work-link" />
+                                <div className="work-content">
+                                    <h2>{job.company}</h2>
                                     <p>
                                         {job.services.map((service, index) => (
                                         <span key={index}>
@@ -30,7 +34,7 @@ const OurWork = () => {
                                         </span>
                                         ))}
                                     </p>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     ))}

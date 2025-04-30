@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ourServicesData from '../data/ourServicesData.js';
 import Wordmark from '../assets/Wordmark.svg';
 import '../styles/Footer.css';
 
@@ -29,17 +30,21 @@ const Footer = () => {
           <div className="footer-services">
             <h4>Services</h4>
             <ul>
-              <li><Link to="/services/web-design">Web Design + Development</Link></li>
-              <li><Link to="/services/branding">Brand Development</Link></li>
-              <li><Link to="/services/marketing">Printing Services</Link></li>
-              <li><Link to="/services/consulting">Custom Art Creation</Link></li>
+              {ourServicesData.map((service) => (
+                <Link 
+                  key={service.id} 
+                  to={`/services/${service.url}`} 
+                >
+                  {service.title}
+                </Link>
+              ))}
             </ul>
           </div>
           <div className="social-media">
             <h4>Social Media</h4>
             <ul>
-              <li><a href="https://www.instagram.com/rado.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/rado-design-studio/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <a href="https://www.instagram.com/rado.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/company/rado-design-studio/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </ul>
           </div>
         </div>
