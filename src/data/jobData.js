@@ -14,8 +14,24 @@ import ChungLiThumbnail from "../assets/chung-li/Chung-Li-Thumbnail.svg";
     import Right from "../assets/chung-li/Right.png";
 import CraterLogo from "../assets/crater/Crater-Banner.png";
     import CraterThumbnail from "../assets/crater/Crater-Thumbnail.png";
+    import CraterHome from "../assets/crater/Home.png";
+    import CraterFeatured from "../assets/crater/Featured.png";
+    import CraterApparel from "../assets/crater/Apparel.png";
+    import CraterSnowboard from "../assets/crater/Snowboards.png";
+    import CraterCart from "../assets/crater/Cart.png";
+    import CraterAdmin from "../assets/crater/Admin.png";
+    import CraterViewed from "../assets/crater/Viewed.png";
+    import CraterManage from "../assets/crater/Manage.png";
 import DopeSouls from "../assets/dope-souls/DopeSouls-Banner.svg";
     import DopeSoulsThumbnail from "../assets/dope-souls/DopeSouls-Thumbnail.svg";
+    import WaveBreaker from "../assets/dope-souls/DopeSouls_WaveBreaker_Mockup.jpg";
+    import StaySalty from "../assets/dope-souls/DopeSouls_StaySalty_Yth_Mockup.jpg";
+    import SignitureHoodie from "../assets/dope-souls/DopeSouls_SignitureHoodie_Mockup.jpg";
+    import SignitureHoodieWomens from "../assets/dope-souls/DopeSouls_SignitureHoodie_Womens_Mockup.jpg";
+    import Signiture from "../assets/dope-souls/DopeSouls_Signiture_Mockup.jpg";
+    import IconHat from "../assets/dope-souls/DopeSouls_IconHat_Mockup.jpg";
+    import SignitureYth from "../assets/dope-souls/DopeSouls_Signiture_Yth_Mockup.jpg";
+    import SignitureHat from "../assets/dope-souls/DopeSouls_SignitureHat_Mockup.jpg";
 
 const jobData = [
     {
@@ -185,17 +201,42 @@ const jobData = [
             title: "Website",
             images: [
                 {
-                    image: reiaHome,
-                    caption: "Reia Home Page Layout",
+                    image: CraterHome,
+                    caption: "",
+                },
+                {
+                    image: CraterFeatured,
+                    caption: "",
+                },
+                {
+                    image: CraterApparel,
+                    caption: "",
+                },
+                {
+                    image: CraterSnowboard,
+                    caption: "",
+                },
+                {
+                    image: CraterCart,
+                    caption: "",
+                },
+                {
+                    image: CraterAdmin,
+                    caption: "",
+                },
+                {
+                    image: CraterViewed,
+                    caption: "",
+                },
+                {
+                    image: CraterManage,
+                    caption: "",
                 },
             ],
         },
         extraImages: {
             images: [
-                {
-                    image: reiaBanner,
-                    caption: "Reia Banner",
-                },
+
             ],
         },
         featured: false,
@@ -226,20 +267,45 @@ const jobData = [
             images: [],
         },
         identity: {
-            title: "Website",
+            title: "Mockups & Custom Art",
             images: [
                 {
-                    image: reiaHome,
-                    caption: "Reia Home Page Layout",
+                    image: SignitureHoodie,
+                    caption: "",
+                },
+                {
+                    image: SignitureHoodieWomens,
+                    caption: "",
+                },
+                {
+                    image: Signiture,
+                    caption: "",
+                },
+                {
+                    image: WaveBreaker,
+                    caption: "",
+                },
+                {
+                    image: StaySalty,
+                    caption: "",
+                },
+                {
+                    image: IconHat,
+                    caption: "",
+                },
+                {
+                    image: SignitureYth,
+                    caption: "",
+                },
+                {
+                    image: SignitureHat,
+                    caption: "",
                 },
             ],
         },
         extraImages: {
             images: [
-                {
-                    image: reiaBanner,
-                    caption: "Reia Banner",
-                },
+
             ],
         },
         featured: false,

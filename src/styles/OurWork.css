@@ -83,6 +83,7 @@
     left: 0;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius:0 8px 8px 0;
     color: #fff;
     padding: 1rem;
     margin-bottom: 20px;
@@ -92,7 +93,8 @@
   }
 
 .work-item:hover .work-content {
-  transform: translateX(0); 
+  transform: translateX(0);
+  pointer-events: none;
 }
   
   .work-content h2 {
@@ -119,5 +121,18 @@
 
     .work-item {
         width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 440px) {
+    .work-content {
+        width: 100%;
+        transform: translateX(0);
+
+        &:hover {
+            transform: translateX(0);
+        }
     }
 }

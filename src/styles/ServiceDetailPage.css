@@ -10,6 +10,10 @@
    padding: 0 10% 5% 10%;
 }
 
+.service-type-title::before {
+    content: attr(data-title);
+}
+
 .service-details {
     display: flex;
     flex-wrap: wrap;

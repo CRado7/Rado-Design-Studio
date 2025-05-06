@@ -43,10 +43,11 @@
 
 .down-arrow {
   position: absolute;
-  bottom: 100px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   rotate: 90deg;
+  z-index: 1000;
 }
 
 .down-arrow img {
@@ -250,34 +251,8 @@
   min-width: 300px;
 }
 
-.featured > h3 {
-  display: inline-block;
-  position: relative;
-  text-align: right;
-  background-color: red;
-}
-
 .featured > h3::before{
   content: 'Featured Projects';
-  position: absolute;
-  display: block;
-  /* width: 100%; */
-  bottom: 0;
-  right: 0;
-  padding: 0 0 0 10px;
-  z-index: 3;
-  text-align: right;
-}
-
-.featured > h3::after{
-  content: '';
-  position: absolute;
-  bottom: 40%;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--main-text);
-  z-index: -1;
 }
 
 .featured-work-item {
@@ -331,6 +306,7 @@
   font-size: 1rem;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 8px 8px 0;
   color: var(--accent-color);
   padding: 1rem;
   min-width: 25%;

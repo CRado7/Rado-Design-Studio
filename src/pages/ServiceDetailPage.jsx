@@ -39,7 +39,7 @@ function ServicesDetailPage() {
               <div className="service-types">
                   {currentService.serviceType.service.map((type, index) => (
                     <div key={index} className="service-type">
-                    <h3>{type.title}</h3>
+                    <h3 className="service-type-title" data-title={type.title}>{type.title}</h3>
                     <div className="service-details">
                         {type.image && <img src={type.image} alt={type.title} />}
                         {type.serviceDetails && <p>{type.serviceDetails}</p>}

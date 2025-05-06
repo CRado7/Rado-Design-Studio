@@ -31,11 +31,11 @@ const HomePage = () => {
                 >
                 <img src={Wordmark} alt="Rado Design Studio" className="fade-in-down"/>
                 <h1 className="fade-in-left">Crafting brands and digital experiences that{' '}<span className="blue">empower</span>{' '}your company</h1>
-                <div className="down-arrow">
-                    <a href="#intro" className="fade-in-up">
-                        <img src={downArrow} alt="To Next Section" />
-                    </a>
-                </div>
+            </div>
+            <div className="down-arrow">
+                <a href="#intro" className="fade-in-up">
+                    <img src={downArrow} alt="To Next Section" />
+                </a>
             </div>
             <div className="index1">
                 <div id="intro" className="intro opacity-up">
